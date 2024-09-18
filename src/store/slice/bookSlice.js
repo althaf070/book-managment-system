@@ -14,7 +14,7 @@ const bookSlice = createSlice({
     },
     editBook: (state, action) => {
       const { id, title, author } = action.payload;
-      const book = state.books.find(book => book.id ===id)
+      const book = state.books.find(book => book.id ===parseInt(id))
       if (book) {
         book.title = title
         book.author = author
