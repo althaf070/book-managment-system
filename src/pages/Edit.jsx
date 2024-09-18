@@ -17,12 +17,12 @@ const Edit = () => {
 
   useEffect(() => {
     if (!book) {
-      navigate("/");
+      navigate("/")
     }
   }, [book, navigate]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     
     const updatedBook = { id: id, title, author }
     dispatch(editBook(updatedBook))

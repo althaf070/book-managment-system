@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const bookSlice = createSlice({
   name: 'books',
@@ -7,21 +7,21 @@ const bookSlice = createSlice({
   },
   reducers: {
     addBook: (state, action) => {
-      state.books.push(action.payload);
+      state.books.push(action.payload)
     },
     deleteBook: (state, action) => {
-      state.books = state.books.filter(book => book.id !== action.payload);
+      state.books = state.books.filter(book => book.id !== action.payload)
     },
     editBook: (state, action) => {
       const { id, title, author } = action.payload;
-      const book = state.books.find(book => book.id === parseInt(id));
+      const book = state.books.find(book => book.id ===id)
       if (book) {
-        book.title = title;
-        book.author = author;
+        book.title = title
+        book.author = author
       }
     }
   }
 });
 
-export const { addBook, deleteBook, editBook } = bookSlice.actions;
-export default bookSlice.reducer;
+export const { addBook, deleteBook, editBook } = bookSlice.actions
+export default bookSlice.reducer

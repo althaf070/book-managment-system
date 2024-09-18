@@ -1,13 +1,13 @@
-import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux"
 import "./add.css";
-import { useState } from "react";
-import { addBook } from "../store/slice/bookSlice";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react"
+import { addBook } from "../store/slice/bookSlice"
+import { useNavigate } from "react-router-dom"
 const Add = () => {
-  const dispatch = useDispatch();
-  const naviagate = useNavigate();
-  const [title, settitle] = useState("");
-  const [author, setauthor] = useState("");
+  const dispatch = useDispatch()
+  const naviagate = useNavigate()
+  const [title, settitle] = useState("")
+  const [author, setauthor] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault();
       const newBook = {
@@ -15,9 +15,9 @@ const Add = () => {
         author,
         id: Date.now()
       };
-      dispatch(addBook(newBook));
-      settitle("");
-      naviagate("/");
+      dispatch(addBook(newBook))
+      settitle("")
+      naviagate("/")
   };
   return (
     <section>
