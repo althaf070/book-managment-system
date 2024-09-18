@@ -1,0 +1,11 @@
+.home {
+    display: grid;
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.items {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
